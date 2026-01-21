@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <script src="js/products.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/custom-styles.css">
+    <title>Aotearoa Adventure Gear | Shop</title>
+</head>
+
+<body>
+
+    <!-- Site Header -->
+    <header class="mobile-header wide">
+        <!-- Mobile header nav content -->
+        <button id="burger" class="burger-btn">☰</button>
+
+        <nav class="mobile-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="cart.html" class="cart-nav-btn"><i class="bi bi-cart"></i>Your Cart</a></li>
+            </ul>
+        </nav>
+
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logo.png" alt="Aotearoa Adventure Gear Logo">
+            </a>
+        </div>
+
+        <!-- Search bar - not visible on any other page -->
+        <div class="search-bar">
+            <i class="bi bi-search"></i>
+            <input type="text" placeholder="Search...">
+        </div>
+
+        <!-- Main Navigation -->
+        <div class="nav-links">
+            <nav>
+                <ul class="nav-ul">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="cart.html" class="cart-nav-btn"><i class="bi bi-cart"></i>Your Cart</a></li>
+                </ul>
+            </nav>
+        </div>
+
+
+    </header>
+
+    <main class="main-container">
+        <section class="shop-hero">
+            <h1>Premium outdoor gear built for New Zealand adventures</h1>
+            <hr>
+            <div class="shop-search-center">
+                <div class="shop-search-bar">
+                    <i class="bi bi-search"></i>
+                    <input type="text" placeholder="Search...">
+                    <button type="submit" class="next-button">Submit</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-categories">
+            <h1>Featured Categories</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis officia
+            </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+
+            <div class="featured-categories-container">
+                <div class="category">
+                    <img src="images/logo.png" alt="Aotearoa Adventure Gear Logo">
+                </div>
+                <div class="category">
+                    <img src="images/logo.png" alt="Aotearoa Adventure Gear Logo">
+                </div>
+                <div class="category">
+                    <img src="images/logo.png" alt="Aotearoa Adventure Gear Logo">
+                </div>
+                <a href="shop.html#shopSection" role="button">
+                    <div class="category shop-now">
+                        <h1>Shop Now</h1>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section class="shop-newsletter">
+            <div class="shop-news-left">
+                <img src="images/logo.png" alt="Aotearoa Adventure Gear Logo">
+            </div>
+            <div class="shop-news-right">
+                <h1>Newsletter</h1>
+                <div class="shop-news-email">
+                    <input type="email" id="email" name="email" placeholder="Email Address" required>
+                    <button type="submit" class="next-button">Subscribe</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="shop-section" id="shopSection">
+            <div class="shop-intro">
+                <h2>Shop Adventure Gear</h2>
+                <p>
+                    Explore premium outdoor equipment designed for New Zealand
+                    conditions.
+                </p>
+                <a href="shop.html" class="browse-button">Browse All</a>
+            </div>
+
+            <div class="shop-padding product-grid" id="productGrid">
+                <!-- 6 product cards -->
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-simple">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+            </nav>
+        </div>
+        <p class="copyright">&copy; 2026 Aotearoa Adventure Gear</p>
+    </footer>
+
+    <!-- Javascript for mobile menu open and close -->
+    <script>
+        document.getElementById("burger").addEventListener("click", () => {
+            document.querySelector(".mobile-menu").classList.toggle("open");
+        });
+    </script>
+
+</body>
+
+</html>

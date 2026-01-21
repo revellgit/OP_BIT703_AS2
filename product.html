@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+
+<head>
+    <link rel="stylesheet" href="css/custom-styles.css">
+
+    <script src="js/products.js" defer></script>
+    <script src="js/product-detail.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <title>Aotearoa Adventure Gear | Shop</title>
+</head>
+
+<body>
+
+    <!-- Site Header -->
+    <header class="mobile-header wide">
+        <!-- Mobile header nav content -->
+        <button id="burger" class="burger-btn">☰</button>
+
+        <nav class="mobile-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="cart.html" class="cart-nav-btn"><i class="bi bi-cart"></i>Your Cart</a></li>
+            </ul>
+        </nav>
+
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logo.png" alt="Aotearoa Adventure Gear Logo">
+            </a>
+        </div>
+
+        <!-- Search bar - not visible on any other page -->
+        <div class="search-bar">
+            <i class="bi bi-search"></i>
+            <input type="text" placeholder="Search...">
+        </div>
+
+        <!-- Main Navigation -->
+        <div class="nav-links">
+            <nav>
+                <ul class="nav-ul">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="cart.html" class="cart-nav-btn"><i class="bi bi-cart"></i>Your Cart</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-container">
+        <!-- Product Details -->
+        <section class="product-details">
+            <div class="product-image-card">
+                <img id="product-image" alt="">
+            </div>
+
+            <div class="product-info-card">
+                <h1 id="product-name"></h1>
+                <p id="product-rating"></p>
+                <h2 id="product-price"></h2>
+                <p id="product-description"></p>
+                <hr>
+                <button class="next-button">Add to Cart</button>
+            </div>
+        </section>
+
+        <section class="similar-products">
+            <h1>Similar Products</h1>
+            <div class="similar-inner">
+                <div class="similar-grid" id="productGrid">
+                    <!-- 6 product cards -->
+                </div>
+            </div>
+        </section>
+
+        <section class="product-reviews">
+            <div class="reviews-container">
+                <h1>Reviews</h1>
+                <div class="review-item">
+                    <div class="review-customer">
+                        <div class="avatar">
+                            <i class="bi bi-person-circle"></i>
+                        </div>
+                        <div class="customer-details">
+                            <h2>JOHN DOE</h2>
+                            <p>August 14, 2018</p>
+                            <p class="review-stars">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star"></i>
+                                <i class="bi bi-star"></i>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="review-text">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error tempora ex, praesentium
+                            debitis
+                            molestias voluptatum consequatur fuga. Harum, sunt, aliquid unde nemo minus natus sit sint
+                            non
+                            mollitia itaque quidem.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error tempora ex, praesentium
+                            debitis
+                            molestias voluptatum consequatur fuga. Harum, sunt, aliquid unde nemo minus natus sit sint
+                            non
+                            mollitia itaque quidem.</p>
+                    </div>
+                </div>
+
+                <hr class="review-divider">
+
+                <div class="review-item">
+                    <div class="review-customer">
+                        <div class="avatar">
+                            <i class="bi bi-person-circle"></i>
+                        </div>
+                        <div class="customer-details">
+                            <h2>JOHN DOE</h2>
+                            <p>August 14, 2018</p>
+                            <p class="review-stars">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star"></i>
+                                <i class="bi bi-star"></i>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="review-text">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error tempora ex, praesentium
+                            debitis
+                            molestias voluptatum consequatur fuga. Harum, sunt, aliquid unde nemo minus natus sit sint
+                            non
+                            mollitia itaque quidem.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error tempora ex, praesentium
+                            debitis
+                            molestias voluptatum consequatur fuga. Harum, sunt, aliquid unde nemo minus natus sit sint
+                            non
+                            mollitia itaque quidem.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-simple">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+            </nav>
+        </div>
+        <p class="copyright">&copy; 2026 Aotearoa Adventure Gear</p>
+    </footer>
+
+    <!-- Javascript for mobile menu open and close -->
+    <script>
+        document.getElementById("burger").addEventListener("click", () => {
+            document.querySelector(".mobile-menu").classList.toggle("open");
+        });
+    </script>
+
+</body>
+
+</html>

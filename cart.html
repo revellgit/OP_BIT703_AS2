@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+
+<head>
+    <script src="js/my-cart.js" defer></script>
+    <script src="js/show-cart.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/custom-styles.css">
+    <title>Aotearoa Adventure Gear | Your Cart</title>
+</head>
+
+<body>
+
+    <!-- Site Header -->
+    <header class="mobile-header wide">
+        <!-- Mobile header nav content -->
+        <button id="burger" class="burger-btn">☰</button>
+
+        <nav class="mobile-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="cart.html" class="cart-nav-btn"><i class="bi bi-cart"></i>Your Cart</a></li>
+            </ul>
+        </nav>
+
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logo.png" alt="Aotearoa Adventure Gear Logo">
+            </a>
+        </div>
+
+        <!-- Search bar - not visible on any other page -->
+        <div class="search-bar">
+            <i class="bi bi-search"></i>
+            <input type="text" placeholder="Search...">
+        </div>
+
+        <!-- Main Navigation -->
+        <div class="nav-links">
+            <nav>
+                <ul class="nav-ul">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="cart.html" class="cart-nav-btn"><i class="bi bi-cart"></i>Your Cart</a></li>
+                </ul>
+            </nav>
+        </div>
+
+
+    </header>
+
+
+    <main class="main-container">
+        <section class="cart-header">
+            <div class="headings">
+                <h2 class="active">1. Shopping Cart</h2>
+                <h2>2. Shipping Details</h2>
+                <h2>3. Payment Options</h2>
+            </div>
+            <div class="header-underline">
+                <hr>
+            </div>
+        </section>
+
+        <section class="cart-section">
+            <div class="cart-items">
+                <h1 class="cart-summary-line">Shopping Cart</h1>
+                <hr>
+                <div class="cart-list" id="productGrid">
+                    <!-- List of product cards for items in cart -->
+                </div>
+                <hr>
+            </div>
+
+            <div class="cart-summary">
+                <h1 class="cart-summary-line">Summary</h1>
+                <hr>
+                <h2 class="cart-summary-line">ENTER COUPON CODE</h2>
+                <hr>
+                <div class="cart-summary-line">
+                    <h3><span>SUBTOTAL</span></h3>
+                    <h3>$<span id="subtotal"></span></h3>
+                </div>
+
+                <div class="cart-summary-line">
+                    <h3><span>SHIPPING</span></h3>
+                    <h3><span id="shipping-value"></span></h3>
+                </div>
+
+                <div class="cart-summary-line">
+                    <h3><span>TAXES</span></h3>
+                    <h3>$<span id="tax"></span></h3>
+                </div>
+                <hr>
+                <div class="cart-summary-line">
+                    <h2><span>TOTAL</span></h2>
+                    <h2>$<span id="total"></span></h2>
+                </div>
+            </div>
+        </section>
+
+        <section class="cart-nav">
+            <a href="shipping.html" class="cart-next-cancel next-button">Next</a>
+            <a href="index.html" class="cart-next-cancel cancel-button">Cancel</a>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-simple">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+            </nav>
+        </div>
+        <p class="copyright">&copy; 2026 Aotearoa Adventure Gear</p>
+    </footer>
+
+    <!-- Javascript for mobile menu open and close -->
+    <script>
+        document.getElementById("burger").addEventListener("click", () => {
+            document.querySelector(".mobile-menu").classList.toggle("open");
+        });
+    </script>
+
+</body>
+
+</html>

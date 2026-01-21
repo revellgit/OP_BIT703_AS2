@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+
+<head>
+    <script src="js/my-cart.js" defer></script>
+    <script src="js/show-cart.js" defer></script>
+    <script src="js/shipping.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/custom-styles.css">
+    <title>Aotearoa Adventure Gear | Shipping</title>
+</head>
+
+<body>
+
+    <!-- Site Header -->
+    <header class="mobile-header wide">
+        <!-- Mobile header nav content -->
+        <button id="burger" class="burger-btn">☰</button>
+
+        <nav class="mobile-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="cart.html" class="cart-nav-btn"><i class="bi bi-cart"></i>Your Cart</a></li>
+            </ul>
+        </nav>
+
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logo.png" alt="Aotearoa Adventure Gear Logo">
+            </a>
+        </div>
+
+        <!-- Search bar - not visible on any other page -->
+        <div class="search-bar">
+            <i class="bi bi-search"></i>
+            <input type="text" placeholder="Search...">
+        </div>
+
+        <!-- Main Navigation -->
+        <div class="nav-links">
+            <nav>
+                <ul class="nav-ul">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="cart.html" class="cart-nav-btn"><i class="bi bi-cart"></i>Your Cart</a></li>
+                </ul>
+            </nav>
+        </div>
+
+
+    </header>
+
+    <main class="main-container">
+        <section class="cart-header">
+            <div class="headings">
+                <h2>1. Shopping Cart</h2>
+                <h2 class="active">2. Shipping Details</h2>
+                <h2>3. Payment Options</h2>
+            </div>
+            <div class="header-underline">
+                <hr>
+            </div>
+        </section>
+
+
+        <!-- Shipping Form -->
+        <section class="shipping-section">
+            <div class="shipping-details">
+                <h1>Shipping Details</h1>
+                <hr>
+                <form class="shipping-form">
+                    <div class="form-group">
+                        <label for="fname" class="visually-hidden">First Name</label>
+                        <input type="text" id="fname" name="fname" placeholder="First Name" required>
+                        <span class="required">*</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="lname" class="visually-hidden">Last Name</label>
+                        <input type="text" id="lname" name="lname" placeholder="Last Name">
+                    </div>
+
+                    <div class="form-group full">
+                        <label for="address" class="visually-hidden">Address 1</label>
+                        <input type="text" id="address" name="address" placeholder="Address">
+                    </div>
+                    <div class="form-group full">
+                        <label for="address2" class="visually-hidden">Address 2</label>
+                        <input type="text" id="address2" name="address2" placeholder="Address 2">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="country" class="visually-hidden">Country</label>
+                        <input type="text" id="country" name="country" placeholder="Country">
+                    </div>
+                    <div class="form-group">
+                        <label for="city" class="visually-hidden">City</label>
+                        <input type="text" id="city" name="city" placeholder="City">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="postcode" class="visually-hidden">Zip or Postcode</label>
+                        <input type="text" id="postcode" name="postcode" placeholder="Zip/Postal Code"
+                            pattern="[0-9]{4}" maxlength="4" required>
+                        <span class="required">*</span>
+                    </div>
+                    <div class="form-group half">
+                        <label for="phone" class="visually-hidden">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Phone Number" pattern="[0-9]{9,11}">
+                    </div>
+
+                    <hr class="form-group full">
+
+                    <div class="payment-option shipping-free">
+                        <input type="radio" id="freeShipping" name="shipping" required checked>
+                        <div class="payment-info form-group">
+                            <h3>Free Shipping</h3>
+                            <p>Between 2-5 working days</p>
+                        </div>
+                    </div>
+                    <div class="payment-option shipping-nextday">
+                        <input type="radio" id="nextDayShipping" name="shipping">
+                        <div class="payment-info form-group">
+                            <h3>Next Day Delivery</h3>
+                            <p>24 hours from checkout</p>
+                        </div>
+                    </div>
+
+
+                </form>
+                <hr class="form-group full">
+                <p id="form-error" class="error"></p>
+            </div>
+
+            <div class="shipping-summary">
+                <h1>Summary</h1>
+                <hr>
+                <div class="cart-list compact" id="productGrid">
+                    <!-- List of product cards for items in cart -->
+                </div>
+                <hr>
+                <h2 class="cart-summary-line">HAVE A VOUCHER?</h2>
+                <hr>
+                <div class="cart-summary-line">
+                    <h3><span>SUBTOTAL</span></h3>
+                    <h3>$<span id="subtotal"></span></h3>
+                </div>
+
+                <div class="cart-summary-line">
+                    <h3><span>SHIPPING</span></h3>
+                    <h3><span id="shipping-value"></span></h3>
+                </div>
+
+                <div class="cart-summary-line">
+                    <h3><span>TAXES</span></h3>
+                    <h3>$<span id="tax"></span></h3>
+                </div>
+                <hr>
+                <div class="cart-summary-line">
+                    <h2><span>TOTAL</span></h2>
+                    <h2>$<span id="total"></span></h2>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="cart-nav">
+            <a href="payment.html" id="next-btn" class="cart-next-cancel next-button">Next</a>
+            <a href="index.html" class="cart-next-cancel cancel-button">Cancel</a>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-simple">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+            </nav>
+        </div>
+        <p class="copyright">&copy; 2026 Aotearoa Adventure Gear</p>
+    </footer>
+
+    <!-- Javascript for mobile menu open and close -->
+    <script>
+        document.getElementById("burger").addEventListener("click", () => {
+            document.querySelector(".mobile-menu").classList.toggle("open");
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+
+<head>
+    <script src="js/my-cart.js" defer></script>
+    <script src="js/show-cart.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/custom-styles.css">
+    <title>Aotearoa Adventure Gear | Payment</title>
+</head>
+
+<body>
+
+    <!-- Site Header -->
+    <header class="mobile-header wide">
+        <!-- Mobile header nav content -->
+        <button id="burger" class="burger-btn">☰</button>
+
+        <nav class="mobile-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="cart.html" class="cart-nav-btn"><i class="bi bi-cart"></i>Your Cart</a></li>
+            </ul>
+        </nav>
+
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logo.png" alt="Aotearoa Adventure Gear Logo">
+            </a>
+        </div>
+
+        <!-- Search bar - not visible on any other page -->
+        <div class="search-bar">
+            <i class="bi bi-search"></i>
+            <input type="text" placeholder="Search...">
+        </div>
+
+        <!-- Main Navigation -->
+        <div class="nav-links">
+            <nav>
+                <ul class="nav-ul">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="cart.html" class="cart-nav-btn"><i class="bi bi-cart"></i>Your Cart</a></li>
+                </ul>
+            </nav>
+        </div>
+
+
+    </header>
+
+    <main class="main-container">
+        <section class="cart-header">
+            <div class="headings">
+                <h2>1. Shopping Cart</h2>
+                <h2>2. Shipping Details</h2>
+                <h2 class="active">3. Payment Options</h2>
+            </div>
+            <div class="header-underline">
+                <hr>
+            </div>
+        </section>
+
+        <!-- Payment Methods -->
+        <section class="payment-methods">
+            <div class="cart-section">
+                <div class="choose-payment">
+                    <h1>Payment Method</h1>
+                    <hr>
+                    <div class="credit-or-paypal">
+                        <div class="credit-card">
+                            <div class="credit-inner">
+                                <form>
+                                    <div class="payment-option">
+                                        <input type="radio" name="payment" checked>
+                                        <div class="payment-info">
+                                            <h3>Credit Card</h3>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore ex
+                                                voluptate
+                                                praesentium
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="cc-form">
+                                        <div class="card-number">
+                                            <input type="text" id="cardNumber" name="cnumber"
+                                                placeholder="0000 0000 0000 0000">
+                                            <i class="bi bi-credit-card-2-front"></i>
+                                        </div>
+                                        <div class="card-expiry">
+                                            <input type="text" id="cardExpiry" name="cexpiry" placeholder="MM/YY">
+
+                                        </div>
+                                        <div class="card-cvv">
+                                            <input type="text" id="cardCvv" name="ccvv" placeholder="CVV">
+                                            <i class="bi bi-info-circle-fill"></i>
+                                        </div>
+                                        <div class="card-name">
+                                            <input type="text" id="cardName" name="cname"
+                                                placeholder="Card Holder Name">
+
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+
+                        <div class="pay-pal">
+                            <div class="paypal-inner">
+                                <div class="payment-option">
+                                    <input type="radio" name="payment">
+                                    <div class="payment-info">
+                                        <h3>Paypal</h3>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit
+                                        </p>
+                                        <p>Deserunt corrupti
+                                            dignissimos</p>
+
+                                        </form>
+
+
+                                    </div>
+                                    <img src="images/paypal298x73px.svg" alt="PayPal" class="payment-icon">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="payment-summary">
+                    <h1>Summary</h1>
+                    <hr>
+                    <div class="cart-list compact" id="productGrid">
+                        <!-- List of product cards for items in cart -->
+                    </div>
+                    <hr>
+                    <h2 class="cart-summary-line">HAVE A VOUCHER?</h2>
+                    <hr>
+                    <div class="cart-summary-line">
+                        <h3><span>SUBTOTAL</span></h3>
+                        <h3>$<span id="subtotal"></span></h3>
+                    </div>
+
+                    <div class="cart-summary-line">
+                        <h3><span>SHIPPING</span></h3>
+                        <h3><span id="shipping-value"></span></h3>
+                    </div>
+
+                    <div class="cart-summary-line">
+                        <h3><span>TAXES</span></h3>
+                        <h3>$<span id="tax"></span></h3>
+                    </div>
+                    <hr>
+                    <div class="cart-summary-line">
+                        <h2><span>TOTAL</span></h2>
+                        <h2>$<span id="total"></span></h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cart-nav">
+            <a href="#" class="cart-next-cancel next-button">Pay Now</a>
+            <a href="index.html" class="cart-next-cancel cancel-button">Cancel</a>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-simple">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+            </nav>
+        </div>
+        <p class="copyright">&copy; 2026 Aotearoa Adventure Gear</p>
+    </footer>
+
+    <!-- Javascript for mobile menu open and close -->
+    <script>
+        document.getElementById("burger").addEventListener("click", () => {
+            document.querySelector(".mobile-menu").classList.toggle("open");
+        });
+    </script>
+
+</body>
+
+</html>
