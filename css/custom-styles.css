@@ -1077,7 +1077,7 @@ DESKTOP STYLING ( screen width => 1024px )
 @media (min-width: 1024px) {
 
     .main-container {
-        max-width: 1200px;
+        /* max-width: 1200px; */
         margin: 0 auto;
         padding: 2.5rem;
         padding-top: 0;
